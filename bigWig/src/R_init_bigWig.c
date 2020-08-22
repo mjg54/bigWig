@@ -10,6 +10,7 @@
 /* .Call calls */
 extern SEXP bigWig_bp_chrom_query(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
 extern SEXP bigWig_bp_query(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
+extern SEXP bigWig_load(SEXP, SEXP);
 extern SEXP bigWig_probe_query(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
 extern SEXP bigWig_query(SEXP, SEXP, SEXP, SEXP, SEXP);
 extern SEXP bigWig_unload(SEXP);
@@ -19,6 +20,7 @@ extern SEXP foreach_bed(SEXP, SEXP, SEXP);
 static const R_CallMethodDef CallEntries[] = {
     {"bigWig_bp_chrom_query", (DL_FUNC) &bigWig_bp_chrom_query,  9},
     {"bigWig_bp_query",       (DL_FUNC) &bigWig_bp_query,       12},
+    {"bigWig_load",           (DL_FUNC) &bigWig_load,            2},
     {"bigWig_probe_query",    (DL_FUNC) &bigWig_probe_query,    11},
     {"bigWig_query",          (DL_FUNC) &bigWig_query,           5},
     {"bigWig_unload",         (DL_FUNC) &bigWig_unload,          1},
